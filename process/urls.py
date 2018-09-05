@@ -1,6 +1,7 @@
 from django.urls import path
 
-# from face_tracking.urls import urlpatterns
+# from face_traking.urls import urlpatterns
+# from face_traking.urls import urlpatterns
 
 from . import views
 

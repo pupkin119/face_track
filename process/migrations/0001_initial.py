@@ -21,6 +21,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('landmarks', models.CharField(max_length=2500)),
                 ('created_at', models.DateTimeField(default=datetime.datetime(2018, 9, 3, 13, 49, 19, 838605, tzinfo=utc))),
+                # ('active', models.BooleanField(default=True)),
             ],
         ),
         migrations.CreateModel(

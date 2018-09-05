@@ -1,5 +1,5 @@
 # from django.shortcuts import render
-from .models import Faces, Faces_in_shops, Locals, Shops, Logs
+from .models import Faces, Faces_in_shops, Locals, Shops
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import numpy as np
