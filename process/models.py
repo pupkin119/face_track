@@ -1,3 +1,4 @@
+from auditlog.registry import auditlog
 from django.db import models
 from django.utils import timezone
 import uuid
@@ -26,3 +27,5 @@ class Logs(models.Model):
     local_id = models.IntegerField()
     shop_uuid = models.UUIDField()
     timestamp = models.DateTimeField(default=timezone.now())
+
+auditlog.register(Faces_in_shops)

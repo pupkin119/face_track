@@ -6,9 +6,10 @@
 
 # Ignore env config.
 *.env
-process/__pycache__/
 .idea/
+process/__pycache__/
 process/migrations/__pycache__/
+face_traking/__pycache__/
 
 .DS_Store
 process/.DS_Store

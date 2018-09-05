@@ -83,18 +83,23 @@ def index(request):
             f.landmarks = request.POST['faces_landmark']
             f.save()
 
+            print(f)
+
             idArray = np.append(idArray, f.id)
 
-            f.faces_in_shops_set.create(counts = 0, local_id=1, shop_id = '008f320d-40ce-4aea-a73e-d37175a000d0')
+            print(idArray)
+
+            f.faces_in_shops_set.create(counts = 0, local_id=2, shop_id = '008f320d-40ce-4aea-a73e-d37175a000d0')
+            # print('------------FACE CREATED--------------')
             return JsonResponse({'errors': '0',
                                  'face_id': f.id,
                                  'counts': 0,
-                                 'local_id': 1})
+                                 'local_id': 2})
 
         else:
-            print(a[1][0])
-            m = a[1][0]
-            print(idArray[m])
+            # print(a[1][0])
+            # m = a[1][0]
+            # print(idArray[m])
 
             fis = Faces_in_shops.objects.get(face_id = idArray[a[1][0]])
             fis.counts = fis.counts + 1
